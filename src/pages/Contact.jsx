@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import useMediaQuery from '../hooks/useMediaQuery';
 import { IoLocationSharp, IoMailSharp, IoPersonSharp } from 'react-icons/io5';
 import SocialMediaIcons from '../components/SocialMediaIcons';
+import { motion } from 'framer-motion';
 
 const Contact = ({ setSelectedPage }) => {
   // Ref to set selected page
@@ -49,7 +50,19 @@ const Contact = ({ setSelectedPage }) => {
   return (
     <section id='contact' ref={contactRef}>
       <div className='container'>
-        <h2 className='title'>GET IN TOUCH 😎👇</h2>
+        <motion.h2
+          className='title'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          GET IN TOUCH 😎👇
+        </motion.h2>
         <div
           className={
             isMediumScreen
@@ -57,7 +70,17 @@ const Contact = ({ setSelectedPage }) => {
               : 'contactInfo-container sm'
           }
         >
-          <div className={isMediumScreen ? 'contactInfo md' : 'contactInfo sm'}>
+          <motion.div
+            className={isMediumScreen ? 'contactInfo md' : 'contactInfo sm'}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <h4>Contact Information</h4>
             <p>
               Don't hesitate to contact me😊. Let's connect and build awesome
@@ -92,13 +115,25 @@ const Contact = ({ setSelectedPage }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div
             className={
               isMediumScreen ? 'form-container md' : 'form-container sm'
             }
           >
-            <form ref={form} onSubmit={sendEmail} className='form'>
+            <motion.form
+              ref={form}
+              onSubmit={sendEmail}
+              className='form'
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
               <h4>Message Me</h4>
               <div className='name-email'>
                 <input type='text' placeholder='Name' name='name' required />
@@ -113,10 +148,21 @@ const Contact = ({ setSelectedPage }) => {
               />
               <textarea placeholder='Message' name='message' required />
               <button type='submit'>Send Message</button>
-            </form>
+            </motion.form>
           </div>
         </div>
-        <SocialMediaIcons />
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <SocialMediaIcons />
+        </motion.div>
       </div>
     </section>
   );
