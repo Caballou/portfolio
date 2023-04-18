@@ -101,12 +101,7 @@ const Contact = ({ setSelectedPage }) => {
             <form ref={form} onSubmit={sendEmail} className='form'>
               <h4>Message Me</h4>
               <div className='name-email'>
-                <input
-                  type='text'
-                  placeholder='Name'
-                  name='firstName'
-                  required
-                />
+                <input type='text' placeholder='Name' name='name' required />
                 <input type='email' placeholder='Email' name='email' required />
               </div>
 
