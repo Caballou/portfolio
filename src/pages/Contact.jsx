@@ -164,7 +164,19 @@ const Contact = ({ setSelectedPage }) => {
         >
           <SocialMediaIcons />
         </motion.div>
-        <div className='signature'>Made with ❤️ by Caballou 🐴</div>
+        <motion.div
+          className='signature'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: 50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          Made with ❤️ by Caballou 🐴
+        </motion.div>
       </div>
     </section>
   );
