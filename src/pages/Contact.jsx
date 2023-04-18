@@ -30,11 +30,16 @@ const Contact = ({ setSelectedPage }) => {
         'uLQMnJ4WsD1ain_Ye'
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        (res) => {
+          console.log('Success', res.status, res.text);
+          alert(
+            'Thank you for contacting me! 🤗 I will answer you as soon as possible 🫡'
+          );
+          form.current.reset();
         },
         (error) => {
-          console.log(error.text);
+          console.log('Failed', error.status, error.text);
+          alert('Han error has ocurred😥 please, try again');
         }
       );
   };
