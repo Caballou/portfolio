@@ -83,7 +83,7 @@ const Contact = ({ setSelectedPage }) => {
           >
             <h4>Contact Information</h4>
             <p>
-              Don't hesitate to contact me😊. Let's connect and build awesome
+              Don't hesitate to contact me 😊. Let's connect and build awesome
               things together!
             </p>
             <div className='personalInfo-container'>
@@ -152,6 +152,7 @@ const Contact = ({ setSelectedPage }) => {
           </div>
         </div>
         <motion.div
+          className='socials-contact'
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
@@ -163,6 +164,7 @@ const Contact = ({ setSelectedPage }) => {
         >
           <SocialMediaIcons />
         </motion.div>
+        <div className='signature'>Made with ❤️ by Caballou 🐴</div>
       </div>
     </section>
   );
