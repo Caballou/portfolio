@@ -116,19 +116,19 @@ const Projects = ({ setSelectedPage }) => {
           >
             <div className='project'>
               <a
-                href='https://caballou.github.io/drum-machine/'
+                href='https://skycheck.vercel.app/'
                 target='_blank'
                 rel='noreferrer'
               >
                 <div className='imgBox'>
                   <img
-                    src='./assets/projects-img/drum-machine.png'
-                    alt='drum-machine'
+                    src='./assets/projects-img/skycheck.png'
+                    alt='skycheck-weather-app'
                   />
                 </div>
                 <div className='name'>
                   <span class='code'> {'<'} </span>
-                  <p className={!isMediumScreen ? 'sm' : ''}>Drum Machine</p>
+                  <p className={!isMediumScreen ? 'sm' : ''}>Weather App</p>
                   <span class='code'> {'/>'} </span>
                 </div>
               </a>
