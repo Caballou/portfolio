@@ -1,8 +1,7 @@
-# React + Vite
+# Leandro Gómez Website Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! This is my portfolio website! Made with ReactJS :)
 
-Currently, two official plugins are available:
+Hope you like it ❤️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 Link: https://leandrogomez.vercel.app/
