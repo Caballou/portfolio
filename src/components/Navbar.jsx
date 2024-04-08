@@ -87,8 +87,13 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 {t('navbar.contact')}
               </span>
             </Link>
+
             <a
-              href='https://drive.google.com/u/0/uc?id=1u0gqOsLdOkp-GRN6FXXz4DAoGJC9qHpZ&export=download'
+              href={
+                i18n.language === 'en'
+                  ? 'https://drive.usercontent.google.com/u/0/uc?id=1WuaocgziVYg15Rk-TAkuonDvYR6neJsM&export=download'
+                  : 'https://drive.usercontent.google.com/u/0/uc?id=1JPTk8jsk-aRYMAR1cXv5i5PtCc2DQuio&export=download'
+              }
               className='nav-link nav-resume'
               download
             >
@@ -219,7 +224,11 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 <span style={{ marginLeft: '5px' }}>Contact</span>
               </Link>
               <a
-                href='./resume/RESUME-LeandroGomez.pdf'
+                href={
+                  i18n.language === 'en'
+                    ? 'https://drive.usercontent.google.com/u/0/uc?id=1WuaocgziVYg15Rk-TAkuonDvYR6neJsM&export=download'
+                    : 'https://drive.usercontent.google.com/u/0/uc?id=1JPTk8jsk-aRYMAR1cXv5i5PtCc2DQuio&export=download'
+                }
                 className='side-link side-resume'
                 download
               >

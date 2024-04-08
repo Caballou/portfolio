@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-  const [t] = useTranslation('global');
+  const [t, i18n] = useTranslation('global');
 
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -125,7 +125,11 @@ const Home = () => {
           >
             <a
               className=''
-              href='https://drive.google.com/u/0/uc?id=1u0gqOsLdOkp-GRN6FXXz4DAoGJC9qHpZ&export=download'
+              href={
+                i18n.language === 'en'
+                  ? 'https://drive.usercontent.google.com/u/0/uc?id=1WuaocgziVYg15Rk-TAkuonDvYR6neJsM&export=download'
+                  : 'https://drive.usercontent.google.com/u/0/uc?id=1JPTk8jsk-aRYMAR1cXv5i5PtCc2DQuio&export=download'
+              }
               download
             >
               {t('home.download')}
