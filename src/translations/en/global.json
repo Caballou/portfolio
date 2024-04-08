@@ -1,0 +1,42 @@
+{
+  "navbar": {
+    "brand": "Not the brand",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "home": {
+    "hi": "Hi! I'm",
+    "engineer": "Sound Engineer",
+    "musician": "Musician",
+    "dev": "Developer",
+    "description": "I'm a final-year student of sound engineering, passionate about audio, electronics and programming.",
+    "download": "Download CV"
+  },
+  "about": {
+    "title": "ABOUT ME"
+  },
+  "projects": {
+    "title": "SOME OF MY PROJECTS",
+    "3d": "3D RIRs Processing",
+    "2d": "Acoustical Parameters",
+    "eq": "500 Series Graph EQ",
+    "mix": "Andrew Cole - Dead Roses MIX",
+    "auditorium": "Auditorium Design",
+    "effects": "Manfred - Music & Effects"
+  },
+  "contact": {
+    "title": "GET IN TOUCH 😎👇",
+    "subtitle": "Contact Information",
+    "description": "Don't hesitate to contact me 😊. Let's connect and build awesome things together!",
+    "name": "Name",
+    "location": "Location",
+    "messageMe": "Message Me",
+    "subjectBox": "Subject",
+    "messageBox": "Message",
+    "send": "Send Message",
+    "made": "Made with ❤️ by Caballou 🐴"
+  }
+}

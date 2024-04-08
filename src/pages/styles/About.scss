@@ -1,0 +1,82 @@
+#about {
+  .container {
+    .vid {
+      display: flex;
+      justify-content: center;
+      transition: 0.3s ease-in-out;
+      // animation: boing 4s forwards infinite;
+      &:hover {
+        filter: drop-shadow(14px 14px 0px var(--secondary-color));
+      }
+
+      .vid-border {
+        // border: 1px solid white;
+        transition: 0.5s ease-in-out;
+        &:hover {
+          filter: drop-shadow(-12px -12px 0px var(--secondary-color));
+        }
+      }
+
+      .lg {
+        width: fit-content;
+        max-width: 320px;
+        min-width: 260px;
+      }
+
+      .md {
+        width: fit-content;
+        min-width: 200px;
+      }
+
+      .sm {
+        width: 0px;
+      }
+    }
+
+    .info {
+      // border: 1px solid white;
+      display: flex;
+      flex-direction: column;
+      margin: 0 40px;
+      width: 70%;
+      min-width: 340px;
+
+      .title {
+        // border: 1px solid white;
+        font-family: 'Raleway';
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .description {
+        // border: 1px solid white;
+        font-size: 1.2rem;
+        text-align: justify;
+
+        .text {
+          color: rgb(255, 255, 255, 0.8);
+        }
+
+        .capital {
+          font-size: 2.4rem;
+          color: var(--primary-color);
+          font-weight: bold;
+        }
+
+        .important {
+          color: var(--secondary-color);
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .info-md {
+      width: 80%;
+    }
+    .info-sm {
+      width: 90%;
+    }
+  }
+}
