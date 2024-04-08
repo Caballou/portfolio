@@ -104,7 +104,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
             >
               <img
                 className='language-img en'
-                src='../src/assets/languages/en.png'
+                src='./assets/languages/en.png'
                 alt='en'
               />
             </button>
@@ -117,7 +117,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
             >
               <img
                 className='language-img es'
-                src='../src/assets/languages/es.png'
+                src='./assets/languages/es.png'
                 alt='es'
               />
             </button>
@@ -133,7 +133,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
               >
                 <img
                   className='language-img en w-8 rounded-md'
-                  src='../src/assets/languages/en.png'
+                  src='./assets/languages/en.png'
                   alt='en'
                 />
               </button>
@@ -145,7 +145,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
               >
                 <img
                   className='language-img es w-8'
-                  src='../src/assets/languages/es.png'
+                  src='./assets/languages/es.png'
                   alt='es'
                 />
               </button>

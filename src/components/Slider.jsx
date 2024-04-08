@@ -29,7 +29,7 @@ export function Slider() {
             <div className='container'>
               <img
                 className='logo'
-                src={`../src/assets/skills/skill-${num}.png`}
+                src={`./assets/skills/skill-${num}.png`}
                 alt={`skills-1`}
               />
             </div>

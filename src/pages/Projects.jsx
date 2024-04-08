@@ -45,7 +45,7 @@ const Projects = () => {
               >
                 <div className='imgBox'>
                   <img
-                    src='../src/assets/projects-img/rir3d.png'
+                    src='./assets/projects-img/rir3d.png'
                     alt='zonic-3d-rirs'
                   />
                 </div>
@@ -65,7 +65,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='imgBox'>
-                  <img src='../src/assets/projects-img/eq.png' alt='graph-eq' />
+                  <img src='./assets/projects-img/eq.png' alt='graph-eq' />
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
@@ -83,7 +83,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='imgBox'>
-                  <img src='../src/assets/projects-img/mix.png' alt='mix' />
+                  <img src='./assets/projects-img/mix.png' alt='mix' />
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
@@ -113,10 +113,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='imgBox'>
-                  <img
-                    src='../src/assets/projects-img/rir2d.png'
-                    alt='gg-rirs-2d'
-                  />
+                  <img src='./assets/projects-img/rir2d.png' alt='gg-rirs-2d' />
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
@@ -135,7 +132,7 @@ const Projects = () => {
               >
                 <div className='imgBox'>
                   <img
-                    src='../src/assets/projects-img/auditorium.png'
+                    src='./assets/projects-img/auditorium.png'
                     alt='auditorium'
                   />
                 </div>
@@ -156,7 +153,7 @@ const Projects = () => {
               >
                 <div className='imgBox'>
                   <img
-                    src='../src/assets/projects-img/sound-effects.png'
+                    src='./assets/projects-img/sound-effects.png'
                     alt='sound-effects'
                   />
                 </div>

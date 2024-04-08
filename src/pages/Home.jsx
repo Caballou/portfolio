@@ -71,7 +71,7 @@ const Home = () => {
             <img
               className={isLargeScreen ? 'lg' : isMediumScreen ? 'md' : 'sm'}
               alt='profile-pic'
-              src='../src/assets/profile-image.png'
+              src='./assets/profile-image.png'
             />
           </div>
         </motion.div>
