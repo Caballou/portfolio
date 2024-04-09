@@ -13,17 +13,26 @@ const About = () => {
   const isLargeScreen = useMediaQuery('lg');
   return (
     <section id='about'>
-      <div className='container'>
-        <div className='vid '>
-          <div className='vid-border'>
+      <div
+        className={`container flex  ${
+          isLargeScreen
+            ? 'flex-nowrap my-20'
+            : isMediumScreen
+            ? 'flex-wrap-reverse mb-16'
+            : 'flex-wrap-reverse mb-16 mt-0'
+        }`}
+      >
+        <div className='vid mt-6'>
+          <div className='vid-border '>
             <iframe
-              className={
-                isLargeScreen
-                  ? 'lg border border-white'
-                  : isMediumScreen
-                  ? 'md border border-white'
-                  : 'sm'
-              }
+              className={`mr-10
+                ${
+                  isLargeScreen
+                    ? 'lg border border-white'
+                    : isMediumScreen
+                    ? 'md border border-white h-full overflow-hidden'
+                    : 'sm mr-0'
+                }`}
               src='https://drive.google.com/file/d/1zlV4SN19oS_svqJbtnAvE3Sed8S9NJob/preview'
               width='640'
               height='480'

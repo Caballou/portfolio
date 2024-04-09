@@ -10,7 +10,6 @@
       }
 
       .vid-border {
-        // border: 1px solid white;
         transition: 0.5s ease-in-out;
         &:hover {
           filter: drop-shadow(-12px -12px 0px var(--secondary-color));
@@ -19,17 +18,15 @@
 
       .lg {
         width: fit-content;
-        max-width: 320px;
-        min-width: 260px;
       }
 
       .md {
         width: fit-content;
-        min-width: 200px;
+        // min-width: 200px;
       }
 
       .sm {
-        width: 0px;
+        width: fit-content;
       }
     }
 
@@ -37,9 +34,9 @@
       // border: 1px solid white;
       display: flex;
       flex-direction: column;
-      margin: 0 40px;
-      width: 70%;
-      min-width: 340px;
+
+      width: 90%;
+      min-width: 300px;
 
       .title {
         // border: 1px solid white;
