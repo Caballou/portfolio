@@ -2,10 +2,10 @@
   "navbar": {
     "brand": "No la marca",
     "home": "Inicio",
-    "about": "Sobre mí",
+    "about": "Sobre Mí",
     "projects": "Proyectos",
     "contact": "Contacto",
-    "resume": "Descargar CV"
+    "resume": "CV"
   },
   "home": {
     "hi": "Hola! Soy",

@@ -9,30 +9,25 @@ const About = () => {
   // eslint-disable-next-line no-unused-vars
   const [t, i18n] = useTranslation('global');
 
+  const isSmallScreen = useMediaQuery('sm');
   const isMediumScreen = useMediaQuery('md');
-  const isLargeScreen = useMediaQuery('lg');
+
   return (
     <section id='about'>
       <div
         className={`container flex  ${
-          isLargeScreen
-            ? 'flex-nowrap my-20'
+          isSmallScreen
+            ? 'flex-wrap-reverse mb-12'
             : isMediumScreen
-            ? 'flex-wrap-reverse mb-16'
-            : 'flex-wrap-reverse mb-16 mt-0'
+            ? 'flex-wrap-reverse mt-12'
+            : 'flex-nowrap mt-16'
         }`}
       >
-        <div className='vid mt-6'>
+        <div className='vid mt-6 w-fit'>
           <div className='vid-border '>
             <iframe
-              className={`mr-10
-                ${
-                  isLargeScreen
-                    ? 'lg border border-white'
-                    : isMediumScreen
-                    ? 'md border border-white h-full overflow-hidden'
-                    : 'sm mr-0'
-                }`}
+              className={`mr-10 w-fit
+                ${isSmallScreen ? ' mr-0 border border-white' : null}`}
               src='https://drive.google.com/file/d/1zlV4SN19oS_svqJbtnAvE3Sed8S9NJob/preview'
               width='640'
               height='480'
@@ -41,15 +36,7 @@ const About = () => {
           </div>
         </div>
 
-        <div
-          className={
-            isLargeScreen
-              ? 'info info-lg'
-              : isMediumScreen
-              ? 'info info-md'
-              : 'info info-sm'
-          }
-        >
+        <div className={`info `}>
           <motion.h2
             className='title'
             initial='hidden'

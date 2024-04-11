@@ -15,20 +15,20 @@ import { Link } from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
 function Navbar({ selectedPage, setSelectedPage }) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isMediumScreen = useMediaQuery('md');
+  const isSmallScreen = useMediaQuery('sm');
 
   const [t, i18n] = useTranslation('global');
 
   return (
     <nav className='navbar'>
-      <div className='nav-container'>
+      <div className={`nav-container`}>
         <div className='nav-logo'>
           Lg.
           {/* <div className='not-brand'>({t('navbar.brand')})</div>{' '} */}
         </div>
 
         {/*DESKTOP NAV*/}
-        {isMediumScreen ? (
+        {!isSmallScreen ? (
           <div className='nav-sections'>
             <Link
               to='/'
@@ -104,19 +104,6 @@ function Navbar({ selectedPage, setSelectedPage }) {
             <button
               className='language-button'
               onClick={() => {
-                i18n.changeLanguage('en');
-              }}
-            >
-              <img
-                className='language-img en'
-                src='./assets/languages/en.png'
-                alt='en'
-              />
-            </button>
-
-            <button
-              className='language-button'
-              onClick={() => {
                 i18n.changeLanguage('es');
               }}
             >
@@ -126,22 +113,22 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 alt='es'
               />
             </button>
+            <button
+              className='language-button'
+              onClick={() => {
+                i18n.changeLanguage('en');
+              }}
+            >
+              <img
+                className='language-img en'
+                src='./assets/languages/en.png'
+                alt='en'
+              />
+            </button>
           </div>
         ) : (
           <div className='flex flex-row'>
-            <div className='flex mr-4 px-4'>
-              <button
-                className='language-button pr-5'
-                onClick={() => {
-                  i18n.changeLanguage('en');
-                }}
-              >
-                <img
-                  className='language-img en w-8 rounded-md'
-                  src='./assets/languages/en.png'
-                  alt='en'
-                />
-              </button>
+            <div className='flex'>
               <button
                 className='language-button'
                 onClick={() => {
@@ -152,6 +139,18 @@ function Navbar({ selectedPage, setSelectedPage }) {
                   className='language-img es w-8'
                   src='./assets/languages/es.png'
                   alt='es'
+                />
+              </button>
+              <button
+                className='language-button px-4'
+                onClick={() => {
+                  i18n.changeLanguage('en');
+                }}
+              >
+                <img
+                  className='language-img en w-8 rounded-md'
+                  src='./assets/languages/en.png'
+                  alt='en'
                 />
               </button>
             </div>
@@ -165,7 +164,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
         )}
 
         {/*MOBILE MENU*/}
-        {!isMediumScreen && isMenuToggled && (
+        {isMenuToggled && (
           <div className='sidebar'>
             {/* CLOSE ICON */}
 
@@ -188,7 +187,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 }}
               >
                 <AiOutlineHome />
-                <span style={{ marginLeft: '5px' }}>Home</span>
+                <span style={{ marginLeft: '5px' }}>{t('navbar.home')}</span>
               </Link>
               <Link
                 to='/about'
@@ -199,7 +198,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 }}
               >
                 <AiOutlineUser />
-                <span style={{ marginLeft: '5px' }}>About</span>
+                <span style={{ marginLeft: '5px' }}>{t('navbar.about')}</span>
               </Link>
               <Link
                 to='/projects'
@@ -210,7 +209,9 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 }}
               >
                 <AiOutlineDesktop />
-                <span style={{ marginLeft: '5px' }}>Projects</span>
+                <span style={{ marginLeft: '5px' }}>
+                  {t('navbar.projects')}
+                </span>
               </Link>
               <Link
                 to='/contact'
@@ -221,7 +222,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 }}
               >
                 <AiOutlinePhone />
-                <span style={{ marginLeft: '5px' }}>Contact</span>
+                <span style={{ marginLeft: '5px' }}>{t('navbar.contact')}</span>
               </Link>
               <a
                 href={
@@ -233,7 +234,7 @@ function Navbar({ selectedPage, setSelectedPage }) {
                 download
               >
                 <AiOutlineIdcard />
-                <span style={{ marginLeft: '5px' }}>Resume</span>
+                <span style={{ marginLeft: '5px' }}>{t('navbar.resume')}</span>
               </a>
             </div>
           </div>

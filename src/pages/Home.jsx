@@ -50,10 +50,10 @@ const Home = () => {
   };
 
   const isMediumScreen = useMediaQuery('md');
-  const isLargeScreen = useMediaQuery('lg');
+  const isSmallScreen = useMediaQuery('sm');
   return (
     <section id='home'>
-      <div className='container'>
+      <div className={`container mt-16 ${isSmallScreen ? 'md' : ''}`}>
         {/* IMAGE SECTION */}
 
         <motion.div
@@ -69,7 +69,7 @@ const Home = () => {
         >
           <div className='img-border'>
             <img
-              className={isLargeScreen ? 'lg' : isMediumScreen ? 'md' : 'sm'}
+              className={isSmallScreen ? 'sm' : isMediumScreen ? 'md' : 'lg'}
               alt='profile-pic'
               src='./assets/profile-image.png'
             />
@@ -92,11 +92,11 @@ const Home = () => {
           >
             <p
               className={
-                isLargeScreen
-                  ? 'name-lg'
+                isSmallScreen
+                  ? 'name-sm'
                   : isMediumScreen
                   ? 'name-md'
-                  : 'name-sm'
+                  : 'name-lg'
               }
             >
               {t('home.hi')}
@@ -105,7 +105,13 @@ const Home = () => {
               <br />
               <span className='text-rotate'>&lt; {text} /&gt;</span>
             </p>
-            <p className='description'>{t('home.description')}</p>
+            <p
+              className={`description ${
+                isSmallScreen || isMediumScreen ? 'text-start' : 'text-justify'
+              }`}
+            >
+              {t('home.description')}
+            </p>
             {/* <p className='description-sh'>
               (don't tell anybody, but I like front-end so much 🤫🤭)
             </p> */}

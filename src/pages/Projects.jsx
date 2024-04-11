@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const Projects = () => {
   const [t] = useTranslation('global');
 
-  const isMediumScreen = useMediaQuery('md');
+  const isSmallScreen = useMediaQuery('sm');
 
   return (
     <section id='projects'>
@@ -25,9 +25,9 @@ const Projects = () => {
         >
           <p className='text-3xl font-bold'>{t('projects.title')}</p>
         </motion.h2>
-        <div className={!isMediumScreen ? 'grid sm' : 'grid'}>
+        <div className={isSmallScreen ? 'grid sm' : 'grid'}>
           <motion.div
-            className={!isMediumScreen ? 'row sm' : 'row'}
+            className={isSmallScreen ? 'row sm' : 'row'}
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true, amount: 0.5 }}
@@ -51,7 +51,7 @@ const Projects = () => {
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
-                  <p className={!isMediumScreen ? 'sm' : ''}>
+                  <p className={isSmallScreen ? 'sm' : ''}>
                     {t('projects.3d')}
                   </p>
                   <span className='code'> {'/>'} </span>
@@ -69,7 +69,7 @@ const Projects = () => {
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
-                  <p className={!isMediumScreen ? 'sm' : ''}>
+                  <p className={isSmallScreen ? 'sm' : ''}>
                     {t('projects.eq')}
                   </p>
                   <span className='code'> {'/>'} </span>
@@ -87,7 +87,7 @@ const Projects = () => {
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
-                  <p className={!isMediumScreen ? 'sm' : ''}>
+                  <p className={isSmallScreen ? 'sm' : ''}>
                     {t('projects.mix')}
                   </p>
                   <span className='code'> {'/>'} </span>
@@ -96,7 +96,7 @@ const Projects = () => {
             </div>
           </motion.div>
           <motion.div
-            className={!isMediumScreen ? 'row sm' : 'row'}
+            className={isSmallScreen ? 'row sm' : 'row'}
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true, amount: 0.5 }}
@@ -117,7 +117,7 @@ const Projects = () => {
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
-                  <p className={!isMediumScreen ? 'sm' : ''}>
+                  <p className={isSmallScreen ? 'sm' : ''}>
                     {t('projects.2d')}
                   </p>
                   <span className='code'> {'/>'} </span>
@@ -138,7 +138,7 @@ const Projects = () => {
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
-                  <p className={!isMediumScreen ? 'sm' : ''}>
+                  <p className={isSmallScreen ? 'sm' : ''}>
                     {t('projects.auditorium')}
                   </p>
                   <span className='code'> {'/>'} </span>
@@ -159,7 +159,7 @@ const Projects = () => {
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
-                  <p className={!isMediumScreen ? 'sm' : ''}>
+                  <p className={isSmallScreen ? 'sm' : ''}>
                     {t('projects.effects')}
                   </p>
                   <span className='code'> {'/>'} </span>

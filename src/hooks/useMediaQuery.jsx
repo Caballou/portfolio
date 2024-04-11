@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const sizes = {
-  sm: '640px',
-  md: '768px',
-  lg: '1024px',
-  xl: '1280px',
+  sm: '(max-width: 768px)',
+  md: '(min-width: 768px) and (max-width: 1024px)',
+  lg: '(min-width: 1024px) and (max-width: 1280px)',
+  xl: '(min-width: 1280px)',
   '2xl': '1536px',
 };
 
@@ -12,7 +12,7 @@ const useMediaQuery = (screen) => {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
-    const query = `(min-width: ${sizes[screen]})`;
+    const query = `${sizes[screen]}`;
     const media = window.matchMedia(query);
     if (media.matches !== matches) {
       setMatches(media.matches);
