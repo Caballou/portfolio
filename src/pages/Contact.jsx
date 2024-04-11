@@ -45,6 +45,7 @@ const Contact = () => {
       );
   };
 
+  const isSmallScreen = useMediaQuery('sm');
   const isMediumScreen = useMediaQuery('md');
 
   return (
@@ -65,13 +66,17 @@ const Contact = () => {
         </motion.h2>
         <div
           className={
-            isMediumScreen
-              ? 'contactInfo-container md'
-              : 'contactInfo-container sm'
+            isSmallScreen || isMediumScreen
+              ? 'contactInfo-container sm'
+              : 'contactInfo-container md'
           }
         >
           <motion.div
-            className={isMediumScreen ? 'contactInfo md' : 'contactInfo sm'}
+            className={
+              isSmallScreen || isMediumScreen
+                ? 'contactInfo sm'
+                : 'contactInfo md'
+            }
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true, amount: 0.5 }}
@@ -115,7 +120,9 @@ const Contact = () => {
           </motion.div>
           <div
             className={
-              isMediumScreen ? 'form-container md' : 'form-container sm'
+              isSmallScreen || isMediumScreen
+                ? 'form-container sm'
+                : 'form-container md'
             }
           >
             <motion.form
