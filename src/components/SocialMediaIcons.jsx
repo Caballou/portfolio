@@ -20,13 +20,13 @@ const SocialMediaIcons = () => {
       >
         <BsLinkedin />
       </a>
-      <a
+      {/* <a
         href='https://www.instagram.com/leandrodamian93/'
         target='_blank'
         rel='noreferrer'
       >
         <BsInstagram />
-      </a>
+      </a> */}
       {/* <a
         href='https://www.facebook.com/ElCaballou/'
         target='_blank'
