@@ -23,20 +23,29 @@ const About = () => {
             : 'flex-nowrap mt-16'
         }`}
       >
-        <div className='vid mt-6 w-fit'>
-          <div className='vid-border '>
-            <iframe
+        {/* <div className='vid mt-6 w-fit'> */}
+        <div className='vid mt-6 w-[30%] mr-10'>
+          <div className='vid-border'>
+            <img
+              className={`w-full ${
+                isSmallScreen || isMediumScreen ? 'hidden' : null
+              }`}
+              src='./sonometro.jpg'
+            />
+          </div>
+        </div>
+        {/* <iframe
               className={`mr-10 w-fit
                 ${isSmallScreen ? ' mr-0 border border-white' : null}`}
               src='https://drive.google.com/file/d/1zlV4SN19oS_svqJbtnAvE3Sed8S9NJob/preview'
               width='640'
               height='480'
               allow='autoplay'
-            ></iframe>
-          </div>
-        </div>
+            ></iframe> */}
+        {/* </div> */}
+        {/* </div> */}
 
-        <div className={`info `}>
+        <div className={`info w-[70%]`}>
           <motion.h2
             className='title'
             initial='hidden'

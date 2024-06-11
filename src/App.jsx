@@ -15,6 +15,7 @@ import Projects from './pages/Projects.jsx';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(1);
+
   return (
     <>
       <Navbar setSelectedPage={setSelectedPage} selectedPage={selectedPage} />
