@@ -78,17 +78,17 @@ const Projects = () => {
             </div>
             <div className='project'>
               <a
-                href='https://drive.google.com/file/d/1lnoSiBEl8QuP2TYsCggrCAwMOhOD_yIE/view?usp=drive_link'
+                href='https://drive.google.com/file/d/1vYiZRK-_zXlE0zq2hmcXA20JkZqtK12L/view?usp=drive_link'
                 target='_blank'
                 rel='noreferrer'
               >
                 <div className='imgBox'>
-                  <img src='./assets/projects-img/mix.png' alt='mix' />
+                  <img src='./assets/projects-img/map.png' alt='map' />
                 </div>
                 <div className='name'>
                   <span className='code'> {'<'} </span>
                   <p className={isSmallScreen ? 'sm' : ''}>
-                    {t('projects.mix')}
+                    {t('projects.map')}
                   </p>
                   <span className='code'> {'/>'} </span>
                 </div>
